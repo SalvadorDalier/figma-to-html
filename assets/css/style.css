@@ -42,7 +42,11 @@ a {
 }
 /* ==============header=============== */
 .header {
-  background-color: #8f0909;
+  background-color: #fffcf4;
+}
+.header.fixed {
+  position: sticky;
+  top: -28px;
 }
 .header .body {
   display: flex;
@@ -77,4 +81,8 @@ a {
 
 .header .btn-sign-up {
   min-width: 200px;
+}
+
+.header .action {
+  margin-left: 49px;
 }

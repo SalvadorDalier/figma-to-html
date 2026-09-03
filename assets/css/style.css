@@ -60,7 +60,7 @@ a {
   opacity: 0.7;
   cursor: pointer;
 }
-
+/* edge case: xử lí nếu người dùng input doạn paragraph dài, thì sẽ bị tràn ra ngoài khung. */
 .line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: var(--line-clamp, 1);
@@ -68,11 +68,11 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
+/* giới hạn số dòng hiển thị của đoạn văn bản, nếu vượt quá số dòng thì sẽ bị ẩn đi và hiển thị dấu "..." ở cuối đoạn văn bản. */
 .line-clamp.line-2 {
   --line-clamp: 2;
 }
-
+/* edge case: xử lí nếu người dùng input đoạn paragraph dài, không có khoảng trắng, thì sẽ bị tràn ra ngoài khung. */
 .break-all {
   word-break: break-all;
 }
@@ -292,7 +292,7 @@ a {
 .popular {
   padding: 65px 0;
   background: white;
-  margin-top: 135px;
+  margin-top: 200px;
 }
 
 .popular-top {
@@ -399,4 +399,77 @@ a {
 }
 .popular .course-item .btn-book:hover {
   background: var(--primary-color);
+}
+
+/* =============feedback=============== */
+.feedback {
+  margin-top: 200px;
+  background-color: #2e2100;
+}
+.feedback .feedback-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 96px 0;
+}
+/* khối trái */
+.feedback .feedback-item .avt {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feedback-item .member {
+  color: #f7f7f7;
+  font-family: var(--box-heading);
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.42; /* 141.667% */
+}
+
+.feedback-item .desc {
+  color: #bfbcb2;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+  margin-top: 4px;
+}
+.feedback-item .dots {
+  display: flex;
+  margin-top: 20px;
+  gap: 6px;
+}
+.feedback-item .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: #634700;
+  cursor: pointer;
+}
+
+.feedback-item .info .dot.active {
+  background: var(--primary-color);
+  cursor: default;
+}
+
+.feedback img.open-quotes {
+  width: 30px;
+  height: 28px;
+  position: absolute;
+  left: -30px;
+  top: -28px;
+}
+
+.feedback-item .quotes {
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 1.54; /* 153.846% */
+}
+
+.feedback-item .content {
+  width: 66%;
+  position: relative;
 }

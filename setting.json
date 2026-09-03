@@ -1,0 +1,16 @@
+{
+  "editor.quickSuggestions": {
+    "other": "on",
+    "strings": "on",
+    "comments": "off"
+  },
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.parameterHints.enabled": true,
+  "[html]": {
+    "editor.wordWrap": "on"
+  },
+  "[css]": {
+    "editor.wordWrap": "on"
+  }
+}

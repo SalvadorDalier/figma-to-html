@@ -406,11 +406,14 @@ a {
   margin-top: 200px;
   background-color: #2e2100;
 }
-.feedback .feedback-item {
+
+.feedback-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 96px 0;
+  flex-shrink: 0;
+  width: 100%;
 }
 /* khối trái */
 .feedback .feedback-item .avt {
@@ -472,4 +475,9 @@ a {
 .feedback-item .content {
   width: 66%;
   position: relative;
+}
+
+.feedback-list {
+  display: flex;
+  overflow: hidden;
 }
